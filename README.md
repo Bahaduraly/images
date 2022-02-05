@@ -1,50 +1,71 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Starter Infinite Scroll
-</h1>
+# [Start Bootstrap - New Age](https://startbootstrap.com/theme/new-age/)
 
-This is a Gatsby starter intended for developers who need **infinite scroll** or **pagination** in their Gatsby project. 
+[New Age](https://startbootstrap.com/theme/new-age/) is a web app landing page theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/).
 
-Try out this live demo with 10k photos »»» [https://gatsby-starter-infinite-scroll.baobab.fi](https://gatsby-starter-infinite-scroll.baobab.fi)
+## Preview
 
-## :zap: Get started
+[![New Age Preview](https://assets.startbootstrap.com/img/screenshots/themes/new-age.png)](https://startbootstrap.github.io/startbootstrap-new-age/)
 
-Fork and `npm install`. Run in dev mode with `gatsby develop`.
+**[View Live Preview](https://startbootstrap.github.io/startbootstrap-new-age/)**
 
-If you are wondering how to apply this to your specific use case, here are some examples: [blog posts](https://github.com/baobabKoodaa/blog), [photos](https://github.com/baobabKoodaa/gatsby-starter-photo-book).
+## Status
 
-If you want to understand how this works, I recommend reading the code in the following order:
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-new-age/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-new-age.svg)](https://www.npmjs.com/package/startbootstrap-new-age)
+[![dependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-new-age/status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-new-age)
+[![devDependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-new-age/dev-status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-new-age?type=dev)
 
-» [gatsby-node.js](https://github.com/baobabKoodaa/gatsby-starter-infinite-scroll/blob/master/gatsby-node.js)  
-» [gatsby-browser.js](https://github.com/baobabKoodaa/gatsby-starter-infinite-scroll/blob/master/gatsby-browser.js)  
-» [templates/paginatedPageTemplate.js](https://github.com/baobabKoodaa/gatsby-starter-infinite-scroll/blob/master/src/templates/paginatedPageTemplate.js)  
-» [components/view.js](https://github.com/baobabKoodaa/gatsby-starter-infinite-scroll/blob/master/src/components/view.js)  
-» [components/globalState.js](https://github.com/baobabKoodaa/gatsby-starter-infinite-scroll/blob/master/src/components/globalState.js)
+## Download and Installation
 
-If you run into any difficulty, I will be happy to help.
+To begin using this template, choose one of the following options to get started:
 
-## 🚀 To infinity and beyond!
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/theme/new-age/)
+* Install via npm: `npm i startbootstrap-new-age`
+* Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-new-age.git`
+* [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-new-age)
 
-- The default behavior is to use infinite scroll, but **fallback to pagination** if JS is disabled or an error occurs. Additionally, the demo has a **toggle** so you can test both modes without disabling JS in your browser.
-- This implementation **does not fetch unnecessary metadata at initial pageload**. Instead, we only fetch the metadata that we actually need. For example, if we're showing you 120 items right now, then we only need metadata for 120 items. We can ask for more metadata as you scroll for more items. This was somewhat awkward to implement in Gatsby, which is why previously published implementations load metadata for _all_ items during initial page load, and then use client side JS to filter to the desired items. The performance hit for doing that isn't too bad for small collections of items, but it becomes unbearable for large collections, especially if the metadata contains base64 versions of images as placeholders. **This performance optimization was my main motivation for creating this starter**.
-- Additionally, a minor performance improvement: **initial items shipped along with the initial page instead of separately fetched**.
-- When the user navigates to another internal page and later returns to front page, **scroll position is not forgotten** (because we keep items in global state).
-- **Many edge cases are considered**
-    - Large screens / small pages: If initial items fit to screen before scrolling is possible, we fetch more items (this is often overlooked in infinite scroll implementations, e.g. LinkedIn and react-simple-infinite-scroll have this bug.)
-    - Slow connections: the initial pageload is consistent even before the React component mounts.
-    - Metadata fetching: allow fetching multiple pages of metadata concurrently (as opposed to consecutively, which slows the maximum scroll speed. This can be relevant for example when images are cached locally and metadata pages are not, or if the user wants to scroll fast to a specific location before images can load).
-- Includes a script that can fetch large amounts of random images from Unsplash.
+## Usage
 
-## 🎓 Attribution
+### Basic Usage
 
-- Photos are from [Unsplash](https://unsplash.com). Unfortunately I couldn't get photographer attribution, because their main API is rate limited, and the non limited API (source.unsplash.com) only gave me photos. If you can help me get photographer attribution, that would be awesome!
-- Infinite scroll uses some code from Jared Palmer's [react-simple-infinite-scroll](https://github.com/jaredpalmer/react-simple-infinite-scroll).
-- Image layout CSS Grid is modified from work by [LekoArts](https://www.lekoarts.de/).
-- Traffic lights CSS graphics are modified from work by Azik Samarkandiy.
-- Loading spinner uses icon from FontAwesome.
+After downloading, simply edit the HTML and CSS files included with `dist` directory. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
-I would love to see what you build with this. You can [drop me a message](https://blog.baobab.fi/contact) or star this repo.
+### Advanced Usage
+
+Clone the source files of the theme and navigate into the theme's root directory. Run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `package.json` file to see which scripts are included.
+
+#### npm Scripts
+
+* `npm run build` builds the project - this builds assets, HTML, JS, and CSS into `dist`
+* `npm run build:assets` copies the files in the `src/assets/` directory into `dist`
+* `npm run build:pug` compiles the Pug located in the `src/pug/` directory into `dist`
+* `npm run build:scripts` brings the `src/js/scripts.js` file into `dist`
+* `npm run build:scss` compiles the SCSS files located in the `src/scss/` directory into `dist`
+* `npm run clean` deletes the `dist` directory to prepare for rebuilding the project
+* `npm run start:debug` runs the project in debug mode
+* `npm start` or `npm run start` runs the project, launches a live preview in your default browser, and watches for changes made to files in `src`
+
+You must have npm installed in order to use this build environment.
+
+## Bugs and Issues
+
+Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-new-age/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](https://startbootstrap.com/theme/new-age/).
+
+## About
+
+Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+
+* <https://startbootstrap.com>
+* <https://twitter.com/SBootstrap>
+
+Start Bootstrap was created by and is maintained by **[David Miller](https://davidmiller.io/)**.
+
+* <https://davidmiller.io>
+* <https://twitter.com/davidmillerhere>
+* <https://github.com/davidtmiller>
+
+Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+
+## Copyright and License
+
+Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-new-age/blob/master/LICENSE) license.
