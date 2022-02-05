@@ -1,9 +1,9 @@
 {
-    "title": "414 Studio    ",
+    "home":"https://bahaduraly.github.io/images",
+    "title": "414 Studio",
     "name": "images",
     "version": "6.0.5",
     "scripts": {
-        "deploy": "npm run build && gh-pages -d build",
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
         "build:pug": "node scripts/build-pug.js",
@@ -11,7 +11,9 @@
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
+        "start:debug": "npm run build && node scripts/start-debug.js",
+        "predeploy": "npm run build", <----------- #1
+        "deploy": "gh-pages -d build" <--------- #2
     },
     "description": "A one page app landing page HTML theme for Bootstrap.",
     "keywords": [
