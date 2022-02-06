@@ -12,6 +12,7 @@
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js",
+        "predeploy": "npm run build",
         "deploy": "gh-pages -d dist"
     },
     "description": "A one page app landing page HTML theme for Bootstrap.",
