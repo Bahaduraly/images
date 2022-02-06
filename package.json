@@ -1,5 +1,5 @@
 {
-    "home":"https://bahaduraly.github.io/images",
+    "home":"https://bahaduraly.github.io/images/",
     "title": "414 Studio",
     "name": "images",
     "version": "6.0.5",
@@ -24,7 +24,6 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/theme/new-age",
     "bugs": {
         "url": "https://github.com/StartBootstrap/startbootstrap-new-age/issues",
         "email": "feedback@startbootstrap.com"
